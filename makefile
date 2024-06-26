@@ -1,2 +1,2 @@
 run:
-	python3 blogmaker_lite.py runserver
+	python3 manage.py runserver

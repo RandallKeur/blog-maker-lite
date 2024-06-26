@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h2>Blogs</h2>
+  <div class="title">
+    <p><span class="title">Blogs</span></p>
+  </div>
 
   {% for blog in blogs %}
-    <h3>{{ blog.title }}</h3>
-    <p>{{ blog.description }}</p>
+  <div class="hero">
+    <p><span class="title">{{ blog.title }}</span></p>
+    <p><span class="description">{{ blog.description }}</span></p>
+  </div>
   {% empty %}
     <h3>No blogs have been added yet.</h3>
   {% endfor %}

@@ -5,6 +5,7 @@ __pycache__/
 ## Local env
 .venv/
 .env
+db.sqlite3
 
 ### IntelliJ IDEA ###
 .idea/

@@ -1,6 +1,9 @@
 STARTUP = python3 manage.py
 BASE_URL = http://localhost:8000/
 
+collect-static:
+	${STARTUP} collectstatic
+
 run-server:
 	${STARTUP} runserver
 

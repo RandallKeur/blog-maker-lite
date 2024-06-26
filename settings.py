@@ -1,11 +1,8 @@
 from pathlib import Path
 
 ROOT_URLCONF = "blogmaker_lite"
-
 DEBUG = True
-
 SECRET_KEY = "my-secret-key"
-
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -20,7 +17,6 @@ TEMPLATES = [
         },
     }
 ]
-
 INSTALLED_APPS = [
     "blogs",
     "django.contrib.admin",
@@ -30,24 +26,20 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
-
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
 ]
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': Path(__file__).parent / 'db.sqlite3',
     }
 }
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
 STATIC_URL = "static/"
-
 STATICFILES_DIRS = [
     "css",
 ]
+STATIC_ROOT = "staticfiles/"

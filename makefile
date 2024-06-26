@@ -1,5 +1,5 @@
 run-app:
 	python3 manage.py runserver
 
-run-migration:
+run-migrations:
 	python3 manage.py migrate

@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+## Local env
+.venv/
+.env
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr

@@ -33,7 +33,9 @@ make run-migrations
 make super-user
 ```
 
-- Accessing the database via [admin portal](http://localhost:8000/admin/)
+- Accessing the database via: 
+  - [admin portal](http://localhost:8000/admin/) - ```make db-browser```
+  - terminal -  ```make db-terminal```
 
 ---
 

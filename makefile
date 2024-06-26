@@ -7,7 +7,7 @@ run-server:
 app-browser:
 	open ${BASE_URL}
 
-startup: app-browser db-browser run-server
+startup: db-browser app-browser run-server
 
 migration:
 	${STARTUP} makemigrations blogs

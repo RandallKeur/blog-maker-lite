@@ -18,10 +18,22 @@
 
 This application leverages [sqllite3][sql-lite-3] to spin up a database locally
 
+- Generate migrations:
+```shell
+make migration
+```
+
 - Run migrations:
 ```shell
 make run-migrations
 ```
+
+- Create an admin user:
+```shell
+make super-user
+```
+
+- Accessing the database via [admin portal](http://localhost:8000/admin/)
 
 ---
 
@@ -30,6 +42,7 @@ make run-migrations
 - ### 🐍 [Django][django]
 - ### 📘 [Markdown][markdown]
 - ### ☁ [sql-lite-3][sql-lite-3]
+- ### 📝 [Makefile][makefile]
 
 
 [tutorial]: https://www.mostlypython.com/django-from-first-principles-2/
@@ -37,3 +50,4 @@ make run-migrations
 [django]: https://www.djangoproject.com/
 [markdown]: https://www.markdownguide.org/getting-started/
 [sql-lite-3]: https://docs.python.org/3/library/sqlite3.html
+[makefile]: https://www.gnu.org/software/make/manual/make.html

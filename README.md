@@ -28,9 +28,11 @@ make migration
 make run-migrations
 ```
 
-- Create an admin user:
+- Load database with sample data:
 ```shell
-make super-user
+# set password as env variable
+export DJANGO_SUPERUSER_PASSWORD=""
+make db-refresh
 ```
 
 - Accessing the database via: 

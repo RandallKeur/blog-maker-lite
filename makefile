@@ -18,11 +18,19 @@ migration:
 run-migrations:
 	${STARTUP} migrate
 
-super-user:
-	${STARTUP} createsuperuser
+db-super-user:
+	${STARTUP} createsuperuser --username admin --email admin@admin.com --noinput
 
 db-browser:
 	open ${BASE_URL}admin/
 
 db-terminal:
 	${STARTUP} shell
+
+db-flush:
+	${STARTUP} flush --noinput
+
+db-load-data:
+	python ./generate_sample_data.py
+
+db-refresh: db-flush db-super-user db-load-data

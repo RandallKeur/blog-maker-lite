@@ -21,3 +21,7 @@
 .date {
     font-size: 1.5rem;
 }
+.post-body {
+    padding-left: 15px;
+    padding-right: 15px;
+}

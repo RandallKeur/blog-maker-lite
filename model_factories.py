@@ -7,22 +7,27 @@ from blogs.models import Blog, BlogPost
 
 fake = Faker()
 
+
 def get_title():
     return " ".join(fake.words()).title()
+
 
 def get_description():
     return fake.sentence(nb_words=10)
 
+
 def get_body():
     paragraphs = [
-        fake.paragraph(randint(5,10))
-        for _ in range(randint(3,25))
+        fake.paragraph(randint(5, 10))
+        for _ in range(randint(3, 25))
     ]
     return "\n\n".join(paragraphs)
+
 
 def get_blog():
     blogs = Blog.objects.all()
     return choice(blogs)
+
 
 class BlogFactory(factory.django.DjangoModelFactory):
     class Meta:
@@ -30,6 +35,7 @@ class BlogFactory(factory.django.DjangoModelFactory):
 
     title = factory.LazyFunction(get_title)
     description = factory.LazyFunction(get_description)
+
 
 class BlogPostFactory(factory.django.DjangoModelFactory):
     class Meta:

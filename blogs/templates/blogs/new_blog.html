@@ -2,13 +2,13 @@
 
 {% block content %}
 
-  <h2>Create a new blog</h2>
+    <h2>Create a new blog</h2>
 
-  <form action="{% url 'blogs:new_blog' %}" method='post'>
-    {% csrf_token %}
-    {{ form.as_div }}
+    <form action="{% url 'blogs:new_blog' %}" method='post'>
+        {% csrf_token %}
+        {{ form.as_div }}
 
-    <button name="submit" class="button primary">Create blog</button>
-  </form>
+        <button name="submit" class="button primary">Create blog</button>
+    </form>
 
 {% endblock content %}

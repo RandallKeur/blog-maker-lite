@@ -1,4 +1,5 @@
 """Script to generate sample data."""
+# ruff: noqa
 
 import argparse
 import os

@@ -4,6 +4,9 @@ BASE_URL = http://localhost:8000/
 collect-static:
 	${STARTUP} collectstatic
 
+lint:
+	ruff check .
+
 run-server:
 	${STARTUP} runserver
 

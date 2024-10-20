@@ -1,6 +1,7 @@
 from random import randint, choice
 
 import factory
+from django.contrib.auth.models import User
 from faker import Faker
 
 from blogs.models import Blog, BlogPost
@@ -24,6 +25,11 @@ def get_body():
     return "\n\n".join(paragraphs)
 
 
+def get_blog_owner():
+    users = User.objects.all()
+    return choice(users)
+
+
 def get_blog():
     blogs = Blog.objects.all()
     return choice(blogs)
@@ -35,6 +41,7 @@ class BlogFactory(factory.django.DjangoModelFactory):
 
     title = factory.LazyFunction(get_title)
     description = factory.LazyFunction(get_description)
+    owner = factory.LazyFunction(get_blog_owner)
 
 
 class BlogPostFactory(factory.django.DjangoModelFactory):

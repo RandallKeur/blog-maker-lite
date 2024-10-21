@@ -15,6 +15,9 @@ app-browser:
 
 startup: db-browser app-browser run-server
 
+start:
+	django-admin startproject blogmaker_lite .
+
 migration:
 	${STARTUP} makemigrations blogs
 

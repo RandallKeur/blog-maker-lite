@@ -15,6 +15,8 @@ app-browser:
 
 startup: db-browser app-browser run-server
 
+start:
+	djang-admin
 migration:
 	${STARTUP} makemigrations blogs
 

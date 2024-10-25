@@ -13,10 +13,8 @@ run-server:
 app-browser:
 	open ${BASE_URL}
 
-startup: db-browser app-browser run-server
-
 start:
-	django-admin startproject blogmaker_lite .
+	django-admin startapp app
 
 migration:
 	${STARTUP} makemigrations blogs

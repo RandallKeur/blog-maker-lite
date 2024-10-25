@@ -14,7 +14,7 @@ app-browser:
 	open ${BASE_URL}
 
 start:
-	django-admin startapp blogmaker_lite
+	django-admin startapp app
 
 migration:
 	${STARTUP} makemigrations blogs
